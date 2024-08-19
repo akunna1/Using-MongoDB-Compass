@@ -7,3 +7,7 @@
 #### MongoDB-Compass Vs. MongoDB Atlas
 - MongoDB-Compass: the local version
 - MongoDB-Atlas: the online version
+
+#### Installing MongoDB Compass
+-  https://www.mongodb.com/try/download/community
+-  Make sure install mongoDB as a service is checked
