@@ -15,3 +15,9 @@
 -  Make sure install mongoDB as a service is checked
 -  install mongoDB shell from https://www.mongodb.com/try/download/shell
 -  open terminal and type mongosh
+-  show dbs
+-  use database_name
+-  inserting data from shell to mongodb:
+-    - db database_name.collection_name e.g database_name is bookstore, collection_name is books
+     - db.books.insertOne({title: "The Color of the Wind", author"Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"]}) --> inserting one document
+     - db.books.inserMany({title: "The Color of the Wind", author"Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"]}, {title: "Va Va Voom", author"Mickey Mouse", pages: 234, rating: 9, genres: ["children", "magic"]}) ---> inserting many 
