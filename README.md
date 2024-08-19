@@ -3,6 +3,7 @@
 - MongoDB uses collections and documents
 - Collecions store a specific type  of data record e.g users, authors, books
 - In a collection are documents
+- documents have JSON format, but actually they are stored as bison
 - It can be used to store nested documents
 
 #### MongoDB-Compass Vs. MongoDB Atlas
