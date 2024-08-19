@@ -20,4 +20,10 @@
 -  inserting data from shell to mongodb:
 -    - db database_name.collection_name e.g database_name is bookstore, collection_name is books
      - db.books.insertOne({title: "The Color of the Wind", author"Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"]}) --> inserting one document
-     - db.books.inserMany({title: "The Color of the Wind", author"Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"]}, {title: "Va Va Voom", author"Mickey Mouse", pages: 234, rating: 9, genres: ["children", "magic"]}) ---> inserting many 
+     - db.books.inserMany({title: "The Color of the Wind", author"Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"]}, {title: "Va Va Voom", author"Mickey Mouse", pages: 234, rating: 9, genres: ["children", "magic"]}) ---> inserting many
+- db.books.find()
+- db.books.find({author: "Mickey Mouse"}) --> to filter
+- db.books.find({author: "Mickey Mouse", rating: 7}) --> 2 filters
+
+#### MongoDB Compass Drivers e.g Node.js
+
