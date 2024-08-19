@@ -8,7 +8,7 @@
 
 #### MongoDB-Compass Vs. MongoDB Atlas
 - MongoDB-Compass: the local version
-- MongoDB-Atlas: the online version
+- MongoDB-Atlas: the online version. Use to make and host a cluster online. It an be connected to MongoDB Compass through a connection string.
 
 #### Installing MongoDB Compass
 -  https://www.mongodb.com/try/download/community
