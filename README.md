@@ -1,2 +1,9 @@
-# Using-MongoDB-Compass
-Setting up MongoDB for projects
+#### Basics about MongoDB
+- NoSQL database (i.e not relational, not made out of rows and columns)
+- MongoDB uses collections and documents
+- Collecions store a specific type  of data record e.g users, authors, books
+- Can be used to store nested documents
+
+#### MongoDB-Compass Vs. MongoDB Atlas
+- MongoDB-Compass: the local version
+- MongoDB-Atlas: the online version
