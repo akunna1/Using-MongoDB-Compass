@@ -1,29 +1,83 @@
-#### Basics about MongoDB
-- NoSQL database (i.e not relational, not made out of rows and columns)
-- MongoDB uses collections and documents
-- Collecions store a specific type  of data record e.g users, authors, books
-- In a collection are documents
-- documents have JSON format, but actually they are stored as bison
-- It can be used to store nested documents
+### Basics about MongoDB
 
-#### MongoDB-Compass Vs. MongoDB Atlas
-- MongoDB-Compass: the local version
-- MongoDB-Atlas: the online version. Use to make and host a cluster online. It an be connected to MongoDB Compass through a connection string.
+* MongoDB is a **NoSQL database** — it’s not relational and doesn’t use rows and columns like traditional databases.
+* It organizes data using **collections** and **documents**.
+* A **collection** holds records of the same type (e.g., users, authors, books).
+* Each **collection** contains multiple **documents**.
+* Documents are stored in **JSON-like format** (actually BSON, a binary version of JSON).
+* MongoDB supports **nested documents**, so you can store complex data structures easily.
 
-#### Installing MongoDB Compass
--  https://www.mongodb.com/try/download/community
--  Make sure install mongoDB as a service is checked
--  install mongoDB shell from https://www.mongodb.com/try/download/shell
--  open terminal and type mongosh
--  show dbs
--  use database_name
--  inserting data from shell to mongodb:
--    - db database_name.collection_name e.g database_name is bookstore, collection_name is books
-     - db.books.insertOne({title: "The Color of the Wind", author"Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"]}) --> inserting one document
-     - db.books.inserMany({title: "The Color of the Wind", author"Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"]}, {title: "Va Va Voom", author"Mickey Mouse", pages: 234, rating: 9, genres: ["children", "magic"]}) ---> inserting many
-- db.books.find()
-- db.books.find({author: "Mickey Mouse"}) --> to filter
-- db.books.find({author: "Mickey Mouse", rating: 7}) --> 2 filters
+---
 
-#### MongoDB Compass Drivers e.g Node.js
+### MongoDB Compass vs. MongoDB Atlas
+
+* **MongoDB Compass** is the local GUI application to interact with your MongoDB database on your computer.
+* **MongoDB Atlas** is the cloud-hosted version where you can create and manage MongoDB clusters online.
+* You can connect **Atlas** to **Compass** using a connection string for easy management.
+
+---
+
+### Installing MongoDB Compass
+
+1. Download MongoDB Community Server:
+   [https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community)
+
+   * Make sure **“Install MongoDB as a service”** is checked during setup.
+
+2. Download MongoDB Shell (mongosh):
+   [https://www.mongodb.com/try/download/shell](https://www.mongodb.com/try/download/shell)
+
+3. Open your terminal and start the shell by typing:
+
+   ```
+   mongosh
+   ```
+
+4. Common commands:
+
+   * Show databases:
+
+     ```
+     show dbs
+     ```
+   * Use a specific database:
+
+     ```
+     use database_name
+     ```
+
+5. Insert data into a collection from the shell:
+
+   * Insert one document:
+
+     ```
+     db.books.insertOne({ title: "The Color of the Wind", author: "Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"] })
+     ```
+   * Insert multiple documents:
+
+     ```
+     db.books.insertMany([
+       { title: "The Color of the Wind", author: "Terry Henry", pages: 450, rating: 7, genres: ["fantasy", "magic"] },
+       { title: "Va Va Voom", author: "Mickey Mouse", pages: 234, rating: 9, genres: ["children", "magic"] }
+     ])
+     ```
+
+6. Query data:
+
+   * Find all documents:
+
+     ```
+     db.books.find()
+     ```
+   * Find documents with filter:
+
+     ```
+     db.books.find({ author: "Mickey Mouse" })
+     ```
+   * Find documents with multiple filters:
+
+     ```
+     db.books.find({ author: "Mickey Mouse", rating: 7 })
+     ```
+
 
